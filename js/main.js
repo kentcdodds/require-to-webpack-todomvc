@@ -1,5 +1,7 @@
 /*global require*/
 'use strict';
+require('todomvc-common/base.css')
+require('todomvc-app-css/index.css')
 
 require([
   'backbone',
