@@ -1,18 +1,13 @@
-/*global require*/
-'use strict';
-require('todomvc-common/base.css')
-require('todomvc-app-css/index.css')
+import 'todomvc-common/base.css'
+import 'todomvc-app-css/index.css'
+import Backbone from 'backbone'
+import AppView from './views/app'
+import Workspace from './routers/router'
 
-require([
-  'backbone',
-  './views/app',
-  './routers/router'
-], function (Backbone, AppView, Workspace) {
-  /*jshint nonew:false*/
-  // Initialize routing and start Backbone.history()
-  new Workspace();
-  Backbone.history.start();
+/*jshint nonew:false*/
+// Initialize routing and start Backbone.history()
+new Workspace();
+Backbone.history.start();
 
-  // Initialize the application view
-  new AppView();
-});
+// Initialize the application view
+new AppView();

@@ -3,16 +3,22 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  '../templates/todos.html',
   '../common'
-], function ($, _, Backbone, todosTemplate, Common) {
+], function ($, _, Backbone, Common) {
   'use strict';
 
   var TodoView = Backbone.View.extend({
 
     tagName:  'li',
 
-    template: _.template(todosTemplate),
+    template: _.template(`
+      <div class="view">
+        <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+        <label><%- title %></label>
+        <button class="destroy"></button>
+      </div>
+      <input class="edit" value="<%- title %>">
+    `),
 
     // The DOM events specific to an item.
     events: {
