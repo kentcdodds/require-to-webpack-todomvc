@@ -3,7 +3,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!../templates/todos.html',
+  '../templates/todos.html',
   '../common'
 ], function ($, _, Backbone, todosTemplate, Common) {
   'use strict';
