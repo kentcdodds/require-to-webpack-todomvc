@@ -15,7 +15,7 @@
     "underscore": "^1.7.0"
   },
   "devDependencies": {
-    "text-loader": "0.0.1",
+    "raw-loader": "0.5.1",
     "webpack": "1.12.9",
     "webpack-dev-server": "1.14.0"
   }
