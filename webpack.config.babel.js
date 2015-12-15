@@ -1,4 +1,7 @@
 import path from 'path'
+import process from 'process'
+
+const env = process.env.NODE_ENV
 
 export default {
   context: path.resolve(__dirname, 'js'),
@@ -13,8 +16,21 @@ export default {
     loaders: [
       {test: /\.html$/, loaders: ['raw'], exclude: /node_modules/},
       {test: /\.css$/, loaders: ['style', 'css']},
-      {test: /\.js$/, loaders: ['babel', 'eslint'], exclude: /node_modules/},
+      ...getJSLoaders(),
     ],
   },
+}
+
+function getJSLoaders() {
+  const loaders = []
+  if (env === 'test') {
+    loaders.push(
+      {test: /\.js$/, loaders: ['babel', 'eslint'], exclude: /node_modules/},
+      {test: /\.js$/, loaders: ['isparta', 'eslint'], exclude: /node_modules|\.test\.js/}
+    )
+  } else {
+    loaders.push({test: /\.js$/, loaders: ['babel', 'eslint'], exclude: /node_modules/})
+  }
+  return loaders
 }
 
