@@ -8,9 +8,6 @@ module.exports = {
   },
   resolve: {
     modulesDirectories: ['.', 'node_modules'],
-    alias: {
-      backboneLocalstorage: 'backbone.localstorage'
-    }
   }
 }
 

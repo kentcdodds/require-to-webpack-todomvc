@@ -2,8 +2,8 @@
 define([
   'underscore',
   'backbone',
-  'backboneLocalstorage',
   'models/todo'
+  'backbone.localstorage',
 ], function (_, Backbone, Store, Todo) {
   'use strict';
 
