@@ -10,7 +10,14 @@ define([
     // and ensure that each todo created has `title` and `completed` keys.
     defaults: {
       title: '',
-      completed: false
+      completed: false,
+      priority: 5,
+    },
+
+    prioritize: function () {
+      this.save({
+        priority: 0
+      })
     },
 
     // Toggle the `completed` state of this todo item.
