@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
   "dependencies": {
     "backbone": "^1.1.2",
     "backbone.localstorage": "^1.1.16",
@@ -9,5 +13,10 @@
     "todomvc-app-css": "^1.0.0",
     "todomvc-common": "^1.0.1",
     "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "text-loader": "0.0.1",
+    "webpack": "1.12.9",
+    "webpack-dev-server": "1.14.0"
   }
 }
