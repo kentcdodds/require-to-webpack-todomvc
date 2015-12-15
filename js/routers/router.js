@@ -2,8 +2,8 @@
 define([
   'jquery',
   'backbone',
-  'collections/todos',
-  'common'
+  '../collections/todos',
+  '../common'
 ], function ($, Backbone, Todos, Common) {
   'use strict';
 
