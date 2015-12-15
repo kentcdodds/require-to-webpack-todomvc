@@ -15,7 +15,8 @@ export default {
   module: {
     loaders: [
       {test: /\.html$/, loaders: ['raw'], exclude: /node_modules/},
-      {test: /\.css$/, loaders: ['style', 'css']},
+      {test: /\.css$/, loaders: ['style', 'css'], include: /node_modules/},
+      {test: /\.css$/, loaders: ['style', 'css?modules'], exclude: /node_modules/},
       ...getJSLoaders(),
     ],
   },

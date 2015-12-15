@@ -1,0 +1,10 @@
+.christmasText {
+  color: green;
+  background: red;
+}
+
+:local .todoLabel {
+  composes: christmasText;
+  background: #DE6F6F;
+}
+

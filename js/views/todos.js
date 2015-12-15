@@ -1,4 +1,6 @@
 /*global define*/
+import styles from './todos.css'
+
 define([
   'jquery',
   'underscore',
@@ -14,7 +16,7 @@ define([
     template: _.template(`
       <div class="view">
         <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
-        <label><%- title %></label>
+        <label class="${styles.todoLabel}"><%- title %></label>
         <button class="destroy"></button>
       </div>
       <input class="edit" value="<%- title %>">
