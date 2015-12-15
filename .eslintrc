@@ -1,0 +1,15 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "amd": true,
+    "commonjs": true,
+    "mocha": true,
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "rules": {
+    "no-unexpected-multiline": 2
+  }
+}
